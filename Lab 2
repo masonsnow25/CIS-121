@@ -1,0 +1,29 @@
+# worked with Ethan
+human_age = int(input("Please enter your age: "))
+decimal = (human_age * 7) %1
+dogmonths = decimal * 12
+daypercent = dogmonths %1
+dogdays = daypercent * 30
+dog_age = 7
+human_in_dog_years = human_age * dog_age
+print(f"An age {human_age} human should be {int(human_age * 7)} years, {int(dogmonths)} months, and {int(dogdays)} days in dog age")
+
+
+
+
+cat_age = 9
+decimal1 = (human_age / 9) %1
+catmonths = decimal1 * 12
+daypercentcat = catmonths %1
+catdays = daypercentcat * 30
+print(f"An age {human_age} human should be {int(human_age / 9)} years, {int(catmonths)} months, and {int(catdays)} days in cat age")
+
+
+
+
+horse_years = 3 *((((human_age ** 2)-47)/7)+12)
+decimal2 = (human_age / 9) %1
+horsemonths = decimal2 * 12
+daypercenthorse = horsemonths %1
+horsedays = daypercenthorse * 30
+print(f"An age {int(human_age)} human should be {int(horse_years)} years, {int(horsemonths)} months, and {int(horsedays)} days in cat age")
