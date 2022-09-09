@@ -1,0 +1,75 @@
+"""
+Mason Snow
+9/9/2022
+# Ethan showed me how to do -= for my earnedIncome
+Description of what this program does
+"""
+import sys
+
+
+taxOwed = 0.0
+
+earnedIncome = float(input("Enter the amount of income you earned in 2021: "))
+if earnedIncome < 0:
+	print("You made less than $0. Contact an accountant")
+	sys.exit()
+
+print("Are you married or single?")
+maritalStatus = input("Type m for married and s for single: ")
+
+
+#Ensures you have a valid marital status
+while maritalStatus != "m" and maritalStatus != "s":
+	print("you entered an invalid marital status")
+	maritalStatus = input("Type m for married and s for single: ")
+
+
+
+
+# Your code goes here
+if earnedIncome == 0 and maritalStatus == "s":
+  print("You have no money")
+elif  earnedIncome <= 9950 and maritalStatus == "s": 
+  taxOwed = earnedIncome * .1
+  print(taxOwed)
+  print("This is how much you owe")
+elif earnedIncome <= 40525 and maritalStatus == "s":
+  earnedIncome -= 9950 
+  taxOwed = earnedIncome * .12
+  Final = taxOwed + (9950*.1)
+  print (Final) 
+  print("This is how much you owe")
+elif earnedIncome <= 86375 and maritalStatus == "s":
+  earnedIncome -= 40525
+  taxOwed = earnedIncome * .22
+  Final1 = taxOwed + ((40525-9950) * .12)+9950*0.1
+  print(Final1)
+  print("This is how much you owe")
+elif earnedIncome > 86375 and maritalStatus == "s":
+  print("You make too much")
+
+
+
+
+if earnedIncome <= 19900 and maritalStatus == "m":
+  taxOwed = earnedIncome * .1
+  print(taxOwed)
+elif earnedIncome <= 81050 and maritalStatus == "m":
+  earnedIncome -= 19900
+  taxOwed = earnedIncome * .12
+  Final2 = taxOwed + (19900 * .1)
+  print(Final2)
+  print("This is how much you owe")
+elif earnedIncome <= 172750 and maritalStatus == "m":
+  earnedIncome -= 81050
+  taxOwed = earnedIncome * .22
+  Final3 = taxOwed + ((81050-19900) * .12) +19900 *.1
+  print(Final3)
+  print("This is how much you owe")
+elif earnedIncome > 172750 and maritalStatus == "m":
+  print("You make too much")
+elif earnedIncome == 0 and maritalStatus == "m":
+  print("You have no money")
+  
+
+  
