@@ -1,0 +1,33 @@
+lower = 1
+perfect = 0 
+abundant = 0
+deficient = 0
+divisor = 0
+test = 1 
+sumofd = 0 
+
+upperbound = int(input("Please enter an upper bound for a check"))
+while (lower <= upperbound):
+  divisor = 1
+  sumofd = 0  
+  while (divisor < lower):
+    if (lower%divisor == 0):
+      sumofd += divisor 
+    divisor +=1
+  print("This is the sumofd",sumofd)
+  if (sumofd > lower):
+    abundant += 1
+    print("abun")
+  elif (sumofd < lower):
+    deficient += 1
+    print ("deficient")
+  elif (sumofd == lower):
+    perfect += 1
+    print ("perfect")
+  lower +=1
+  
+  print(lower)
+print ("Between 1 and", upperbound, "There are")
+print(deficient, "deficient numbers")
+print(perfect, "perfect numbers")
+print(abundant, "abundant numbers")
