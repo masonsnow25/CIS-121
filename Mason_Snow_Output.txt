@@ -1,0 +1,6 @@
+Apples Mean: 6.114649681528663
+ Apples Median: 6
+ Bananas Mean: 5.840425531914893
+ Bananas Median: 6.0
+ Strawberries Mean: 6.077419354838709
+ Strawberries Median: 6
